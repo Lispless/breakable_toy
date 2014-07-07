@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :shops, only: [:index, :show, :new, :create, :update, :edit, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
