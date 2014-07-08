@@ -33,7 +33,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :user_name, null: false, default: ""
       t.string :first_name, null: false, default: ""
       t.string :last_name
-      t.string :password, null: false
       t.string :motto
       t.text :bio
       t.text :interests

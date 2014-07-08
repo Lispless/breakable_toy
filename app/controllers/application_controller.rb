@@ -6,6 +6,6 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:first_name, :user_name]
+    devise_parameter_sanitizer.for(:sign_up) << [:password, :first_name, :user_name]
   end
 end
