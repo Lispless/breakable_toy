@@ -5,10 +5,5 @@ class User < ActiveRecord::Base
 
   validates :user_name, presence: true
   validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :moto, presence: true
-  validates :bio, presence: true
-  validates :interests, presence: true
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 end

@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20140707190840) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "user_name",                           null: false
-    t.string   "fist_name",                           null: false
+    t.string   "user_name",              default: "", null: false
+    t.string   "first_name",             default: "", null: false
     t.string   "last_name"
     t.string   "password",                            null: false
     t.string   "motto"
