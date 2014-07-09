@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :user_profile, only: [:index]
+  resources :user_profiles, only: [:index, :new, :update, :edit]
   resources :posts, only: [:index, :show, :new, :create, :update, :edit, :destroy]
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
