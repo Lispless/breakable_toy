@@ -1,0 +1,16 @@
+<h1>
+  Testing profile page
+</h1>
+
+<h4>
+  This is <%= @user.first_name %>'s page
+</h4>
+
+Signed in as <%= @user.user_name %>
+"<%= @profile.motto %>" - <% @user.user_name %>
+
+<%= @user.user_name %>'s interests include
+<%= @profile.interests %>
+
+A little bit about yourself
+<%= @profile.bio %>

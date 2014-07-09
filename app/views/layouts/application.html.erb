@@ -14,8 +14,9 @@
   <body>
 
   <% if user_signed_in? %>
-    <%= current_user.first_name %>
+    Welcome, <%= current_user.first_name %>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+  <% else %>
   <% end %>
 
     <%= yield %>

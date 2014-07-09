@@ -1,7 +1,18 @@
-<h1>
-  Testing Index Page
-</h1>
-
-<%= link_to "Sign Up", new_registration_path(@user) %>
-
-<%= link_to "Sign In", new_user_session_path %>
+<div class="greeting">
+  <div class="row">
+    <div class="small-3 small-centered columns">
+      <h1>
+        Be You
+      </h1>
+  </div>
+  <div class="row">
+    <div class="small-4 small-centered columns">
+      <div class="small-6 columns">
+        <%= link_to "Sign In", new_user_session_path %>
+      </div>
+      <div class="small-6 columns">
+        <%= link_to "Sign Up", new_registration_path(@user) %>
+      </div>
+    </div>
+  </div>
+</div>

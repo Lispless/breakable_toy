@@ -8,4 +8,8 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << [:password, :first_name, :user_name]
   end
+
+   def after_sign_in_path_for(user)
+    user_profile_index_path
+  end
 end
