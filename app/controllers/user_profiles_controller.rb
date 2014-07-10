@@ -21,6 +21,21 @@ class UserProfilesController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(current_user[:id])
+    @profile = @user.user_profile
+  end
+
+  def update
+    @profile = UserProfile.find(params[:id])
+    @profile.update(user_params)
+    redirect_to user_profiles_path
+  end
+
+  def destroy
+
+  end
+
   def user_params
      params.require(:user_profile).permit(:motto, :bio, :interests).merge(user: current_user)
   end

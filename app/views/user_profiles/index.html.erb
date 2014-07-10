@@ -8,6 +8,7 @@
 
 Signed in as <%= @user.user_name %>
 "<%= @profile.motto %>" - <% @user.user_name %>
+<%= link_to "Edit", edit_user_profile_path(@profile) %>
 
 <%= @user.user_name %>'s interests include
 <%= @profile.interests %>

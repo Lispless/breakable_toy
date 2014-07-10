@@ -11,15 +11,18 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <div class="overall_head">
+    <div class="small-11 small-centered columns">
+      <body>
+        <% if user_signed_in? %>
+          Welcome, <%= current_user.first_name %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+        <% end %>
 
-  <% if user_signed_in? %>
-    Welcome, <%= current_user.first_name %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
-  <% else %>
-  <% end %>
+        <%= yield %>
 
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-  </body>
+        <%= javascript_include_tag "application" %>
+      </body>
+    </div>
+  </div>
 </html>
