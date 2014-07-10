@@ -3,7 +3,7 @@ class UserProfilesController < ApplicationController
 
   def index
     @user = User.find(current_user[:id])
-    @profile = UserProfile.find(@user)
+    @profile = @user.user_profile
   end
 
   def new

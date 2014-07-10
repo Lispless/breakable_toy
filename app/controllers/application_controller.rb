@@ -10,6 +10,6 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   end
 
    def after_sign_in_path_for(user)
-    user_profile_path
+    user_profiles_path
   end
 end
