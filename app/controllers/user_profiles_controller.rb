@@ -32,10 +32,6 @@ class UserProfilesController < ApplicationController
     redirect_to user_profiles_path
   end
 
-  def destroy
-
-  end
-
   def user_params
      params.require(:user_profile).permit(:motto, :bio, :interests).merge(user: current_user)
   end

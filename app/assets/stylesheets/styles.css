@@ -5,3 +5,16 @@
 .overall_head {
   margin-top: 1em;
 }
+
+.space {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+body {
+  color: #839096;
+}
+
+a {
+  color: #CE5BF5;
+}

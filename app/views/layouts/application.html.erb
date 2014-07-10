@@ -15,9 +15,12 @@
     <div class="small-11 small-centered columns">
       <body>
         <% if user_signed_in? %>
-          Welcome, <%= current_user.first_name %>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+        <div class="row">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+        </div>
         <% end %>
+        <div class="space">
+        </div>
 
         <%= yield %>
 

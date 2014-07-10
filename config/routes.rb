@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :user_profiles, only: [:index, :new, :update, :edit]
-  resources :posts, only: [:index, :show, :new, :create, :update, :edit, :destroy]
+  resources :posts, only: [:index, :show, :new, :create, :update, :edit]
   root 'home#index'
+  #get '/user_profiles', to: 'user_profiles#index', as :user_profiles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

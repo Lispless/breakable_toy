@@ -1,17 +1,37 @@
-<h1>
-  Testing profile page
-</h1>
+<div class="row">
+  <font size="6">
+    <%= @user.user_name %>
+  </font>
+  <font size="5">
+    "<%= @profile.motto %>"
+  </font>
 
-<h4>
-  This is <%= @user.first_name %>'s page
-</h4>
+  <div class="space">
+  </div>
 
-Signed in as <%= @user.user_name %>
-"<%= @profile.motto %>" - <% @user.user_name %>
-<%= link_to "Edit", edit_user_profile_path(@profile) %>
+  <div class="row">
+    <div class="small-1 columns">
+    </div>
+    <div class="small-11 columns">
+      Interests:<br />
+      <%= @profile.interests %>
+    </div>
+  </div>
 
-<%= @user.user_name %>'s interests include
-<%= @profile.interests %>
+  <div class="space">
+  </div>
 
-A little bit about yourself
-<%= @profile.bio %>
+  <div class="row">
+    <div class="small-1 columns">
+    </div>
+    <div class="small-11 columns">
+      Miniature condensed-like autobiography:<br />
+      <%= @profile.bio %>
+    </div>
+  </div>
+
+  <div class="space">
+  </div>
+
+    <%= link_to "Edit Profile", edit_user_profile_path(@profile) %>
+</div>
