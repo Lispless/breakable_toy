@@ -17,3 +17,11 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).foundation(function(){
+  $(.greeting).hover(function(){
+    $(.greeting).css("background-color","yellow");
+    },function(){
+    $(.greeting).css("background-color","pink");
+  });
+});

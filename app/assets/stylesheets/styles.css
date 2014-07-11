@@ -22,5 +22,13 @@ a {
 }
 
 a:hover {
-color: #A05DBA;
+  color: #A05DBA;
+}
+
+.custom-button-class {
+  background-color: white;
+  color: #ce5bf5;
+  padding-left: 5em;
+  padding-right: 5em;
+  border-radius: 50px;
 }
