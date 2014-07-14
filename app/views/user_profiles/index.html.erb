@@ -49,9 +49,11 @@
 
   <% @posts.each do |post| %>
     <div class="row">
-      <font size="5">
-        <a href="<%= post_path(post) %>" id="postlist"><%= post.title %></a>
-      </font>
+      <div class="small-5 small-push-1 columns">
+        <font size="5">
+          <a href="<%= post_path(post) %>" id="postlist"><%= post.title %></a>
+        </font>
+      </div>
     </div>
     <div class="space">
     </div>
