@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :user_profiles, only: [:index, :new, :update, :edit]
   resources :posts, only: [:index, :show, :new, :create, :update, :edit]
   root 'home#index'
+  get '/home/about', to: 'home#about'
   #get '/user_profiles', to: 'user_profiles#index', as :user_profiles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
