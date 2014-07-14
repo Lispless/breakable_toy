@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :user_profiles, only: [:index, :new, :update, :edit]
-  resources :posts, only: [:index, :show, :new, :create, :update, :edit]
+  resources :posts, only: [:index, :show, :new, :create, :update, :edit, :destroy]
   root 'home#index'
   get '/home/about', to: 'home#about'
   #get '/user_profiles', to: 'user_profiles#index', as :user_profiles

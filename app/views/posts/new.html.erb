@@ -1,0 +1,36 @@
+<div class="row">
+  <font size="6">
+    Post New
+  </font>
+
+  <div class="space">
+  </div>
+
+  <div class="row">
+    <div class="small-8 columns">
+      <%= form_for @post do |f| %>
+        <div class="row">
+          <div class="small-5 columns">
+            <p>
+              <%= f.label :title, 'Title' %><br />
+              <%= f.text_field (:title) %>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-8 columns">
+            <p>
+              <%= f.label :body, 'Body' %><br />
+              <%= f.text_area :body %>
+            </p>
+          </div>
+        </div>
+
+        <p>
+          <%= f.submit 'Save Changes', class: "custom-button-class" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

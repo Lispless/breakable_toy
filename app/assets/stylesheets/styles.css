@@ -36,3 +36,7 @@ a:hover {
   padding-right: 5em;
   border-radius: 50px;
 }
+
+#postlist {
+  color: #839096;
+}

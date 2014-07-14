@@ -25,7 +25,7 @@
     <div class="small-1 columns">
     </div>
     <div class="small-11 columns">
-      Miniature condensed-like autobiography:<br />
+      Personal bio:<br />
       <%= @profile.bio %>
     </div>
   </div>
@@ -33,5 +33,27 @@
   <div class="space">
   </div>
 
+  <div class="row">
     <%= link_to "Profile Edit", edit_user_profile_path(@profile) %>
+  </div>
+
+  <div class="space">
+  </div>
+
+  <div class="row">
+    <%= link_to "New Post", new_post_path %>
+  </div>
+
+  <div class="space">
+  </div>
+
+  <% @posts.each do |post| %>
+    <div class="row">
+      <font size="5">
+        <a href="<%= post_path(post) %>" id="postlist"><%= post.title %></a>
+      </font>
+    </div>
+    <div class="space">
+    </div>
+  <% end %>
 </div>

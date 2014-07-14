@@ -10,17 +10,17 @@
     <div class="small-8 columns">
       <%= form_for @profile do |f| %>
         <p class="motto">
-          <%= f.label :motto, 'Add your motto or personal mantra.  Remind yourself what makes you awesome' %><br>
-          <%= f.text_field (:motto) %><br>
+          <%= f.label :motto, 'Motto' %><br />
+          <%= f.text_field (:motto) %>
         </p>
 
         <p>
-          <%= f.label :bio, 'How did you come to be the master of the macrocosm or the dutchess of destiny?' %><br>
+          <%= f.label :bio, 'Bio' %><br />
           <%= f.text_area :bio %>
         </p>
 
         <p>
-          <%= f.label :interests, 'What are the things that you do that others hold their breathe in envious contempt with?' %><br>
+          <%= f.label :interests, 'Interests' %><br />
           <%= f.text_area :interests %>
         </p>
 
