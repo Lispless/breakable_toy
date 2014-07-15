@@ -31,6 +31,11 @@
           <%= f.submit 'Save Changes', class: "custom-button-class" %>
         </p>
       <% end %>
+
+      <div class="space">
+      </div>
+
+      <%= link_to 'Post Delete', post_path(@post.id), method: :delete %>
     </div>
   </div>
 </div>
