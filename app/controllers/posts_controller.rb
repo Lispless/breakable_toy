@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def show
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -9,9 +9,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @user = User.find(current_user[:id])
+    @post = Post.new(user_params)
     if @post.save
-      redirect_to user_profiles_path(current_user)
+      redirect_to user_profiles_path(@user)
     else
       flash[:notice] = "Please correct the errors and try again"
       render :new
@@ -20,12 +21,12 @@ class PostsController < ApplicationController
 
   def edit
     @user = User.find(current_user[:id])
-    @post = @user.post
+    @post = Post.find(params[:id])
   end
 
   def update
     @post = Post.find(params[:id])
-    @post.update(post_params)
+    @post.update(user_params)
     redirect_to user_profiles_path
   end
 
@@ -36,7 +37,7 @@ class PostsController < ApplicationController
     redirect_to user_profiles_path
   end
 
-  def post_params
+  def user_params
     params.require(:post).permit(:title, :body).merge(user: current_user)
   end
 end

@@ -16,7 +16,12 @@
       <body>
         <% if user_signed_in? %>
         <div class="row">
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+          <div class="small-2 columns">
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+          </div>
+          <div class="small-2 columns end">
+            <%= link_to "Profile", user_profiles_path %>
+          </div>
         </div>
         <% end %>
         <div class="space">

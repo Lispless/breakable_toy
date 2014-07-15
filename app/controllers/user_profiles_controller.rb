@@ -4,7 +4,7 @@ class UserProfilesController < ApplicationController
   def index
     @user = User.find(current_user[:id])
     @profile = @user.user_profile
-    @posts = Post.order("id DESC")
+    @posts = @user.posts
   end
 
   def new

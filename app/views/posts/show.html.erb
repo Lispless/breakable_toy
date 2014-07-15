@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="title">
+        <font size="10">
+          <%= link_to @post.title, edit_post_path %>
+        </font>
+      </div>
+    </div>
+  </div>
+
+  <div class="space">
+  </div>
+
+  <div class="row">
+    <div class="small-10 columns">
+    <%= @post.body %>
+  </div>
+</div>
