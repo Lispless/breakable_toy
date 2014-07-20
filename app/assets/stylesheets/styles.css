@@ -1,7 +1,11 @@
 .greeting {
   margin-top: 10em;
+  text-align: center;
 }
 
+.center {
+  text-align: center;
+}
 #beyou {
   color: #839096;
 }
